@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Landinger - Tailwind CSS Landing Page Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description" />
+    <meta content="coderthemes" name="author" />
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/theme-e5808651.css">
+</head>
+
+<body>
+
+    <!-- Start Sidebar -->
+    <div id="application-sidebar" class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed inset-y-0 start-0 lg:z-30 z-60 w-64 bg-white border-e border-default-200 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-default-50 rtl:hs-overlay-open:translate-x-0 rtl:translate-x-full rtl:lg:translate-x-0">
+        <div class="flex sticky top-0 items-center justify-center px-6 h-18 border-b border-dashed border-default-200">
+            <a href="admin-dashboard.html">
+                <img src="assets/logo.svg" alt="logo" class="h-9 flex dark:hidden">
+            </a>
+        </div>
+
+        <div class="h-[calc(100%-72px)] p-4" data-simplebar>
+            <ul class="admin-menu w-full flex flex-col gap-1.5">
+                <li class="px-2 py-2 text-sm text-default-600 font-medium">Documentation</li>
+
+                <li class="menu-item">
+                    <a class="flex items-center gap-x-2.5 py-3 px-5 text-sm font-medium rounded-md text-primary bg-primary/20" href="index.html">
+                        <i data-lucide="gem" class="w-5 h-5"></i>
+                        Introduction
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="flex items-center gap-x-2.5 py-3 px-5 text-sm font-medium text-default-700 rounded-md hover:bg-default-100" href="installation.html">
+                        <i data-lucide="settings" class="w-5 h-5"></i>
+                        Installation
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="flex items-center gap-x-2.5 py-3 px-5 text-sm font-medium text-default-700 rounded-md hover:bg-default-100" href="changelog.html">
+                        <i data-lucide="list" class="w-5 h-5"></i>
+                        Changelog
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- End Sidebar -->
+    <!-- Start Content -->
+    <div class="min-h-screen flex flex-col lg:ps-64 w-full">
+
+        <!-- Start Header -->
+        <header class="sticky top-0 h-18 flex z-40 w-full border-b border-default-200/80 bg-white/80 backdrop-blur-3xl dark:bg-default-50 print:hidden">
+            <nav class="flex items-center gap-4 w-full px-6">
+                <!-- Navigation Toggle (in Small Screen) -->
+                <div class="lg:hidden flex">
+                    <button type="button" class="text-default-500 hover:text-default-600" data-hs-overlay="#application-sidebar" aria-controls="application-sidebar" aria-label="Toggle navigation">
+                        <i data-lucide="align-justify" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Logo -->
+                <div class="lg:hidden flex">
+                    <a href="admin-dashboard.html">
+                        <img src="assets/logo.svg" alt="logo" class="h-10 w-full flex dark:hidden">
+                    </a>
+                </div>
+
+                <div class="px-2 py-2 text-xl text-default-600 font-semibold">Documentation</div>
+            </nav>
+        </header>
+        <!-- End Header -->
+        <div class="p-6 space-y-6">
+
+            <div class="flex items-center justify-between w-full print:hidden">
+                <h4 class="text-lg font-semibold text-default-900">
+                    Introducation
+                </h4>
+
+                <ol aria-label="Breadcrumb" class="hidden md:flex items-center whitespace-nowrap min-w-0 gap-2">
+                    <li class="text-sm">
+                        <a class="flex items-center gap-2 align-middle text-default-800 font-medium transition-all hover:text-primary" href="javascript:void(0)">
+                            Landinger
+                            <i class="w-4 h-4" data-lucide="chevron-right"></i>
+                        </a>
+                    </li>
+
+                    <li class="text-sm">
+                        <a class="flex items-center gap-2 align-middle text-default-800 font-medium transition-all hover:text-primary" href="javascript:void(0)">
+                            Documentation
+                            <i class="w-4 h-4" data-lucide="chevron-right"></i>
+                        </a>
+                    </li>
+
+                    <li aria-current="page" class="text-sm font-medium text-primary-600 truncate hover:text-primary">
+                        Introducation
+                    </li>
+                </ol>
+            </div>
+            <div class="shadow rounded-lg bg-white dark:bg-default-50 h-fit">
+                <div class="flex items-center justify-between py-4 px-5">
+                    <h5 class="text-lg font-medium text-default-950 capitalize mb-1">Introducation</h5>
+                </div>
+                <div class="p-5 border-t border-dashed border-default-200">
+                    <p class="mb-2 font-medium"> Landinger is a fully featured premium admin template built on top of awesome <strong class="text-red-500">Tailwind v4.1.8</strong>. It's crafted using modern web technologies <strong class="text-red-500">NextJs </strong>and <strong class="text-red-500">Typescript</strong>. The theme includes beautiful dashboard, many ready to use hand crafted components, widgets, pages, etc. The components can be used very easily on any page. The theme is fully responsive and customizable.</p>
+                    <p class="mb-2 font-medium"> It is extremely powerful and adaptable, making it ideal for web development. applications including CRM, CMS, admin panels, dashboards, etc. It is fully responsive and has a perfect look and feel on mobiles and tablets. Also, we tried to implement this by Keeping the concept of modularity in mind, this enables you to reduce the development time and cost. </p>
+                    <p class="mb-2 font-medium"> This documentation is guidelines for all users who can even be a beginner or experienced web developer. </p>
+                    <p class="font-medium"> We really care for our buyers, so in case you are having any question or feedback, please feel free to get back to us via email <code class="text-primary">support@coderthemes.com</code></p>
+                </div>
+            </div>
+
+
+            <div class="shadow rounded-lg bg-white dark:bg-default-50 h-fit">
+                <div class="flex items-center justify-between py-4 px-5">
+                    <h5 class="text-lg font-medium text-default-950 capitalize mb-1">Structure</h5>
+                </div>
+                <div class="px-5 py-0 border-t border-dashed border-default-200">
+                    <pre class="overflow-auto">
+<code class="text-dark">
+├── Documentation
+└── Landinger
+    ├── src/
+    |   ├── app
+    │   ├── assets
+    │   │   └── images
+    │   │   └── css
+    |   ├── components
+    |   |   └── layout
+    |   |   └── wrappers
+    ├── package.json
+    ├── postcss.config.mjs
+    ├── tailwind.config.js
+    ├── README.md
+    ├── next.config.ts
+    └── yarn.lock
+</code>
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="p-6 border-t border-default-200 w-full bg-white dark:bg-default-50 mt-auto print:hidden">
+            <div class="flex flex-wrap items-center justify-between gap-6">
+                <p class="text-default-600 font-semibold lg:text-start text-center">
+                    <script>document.write(new Date().getFullYear())</script> Design & Crafted With 💙 by Coderthemes
+                </p>
+
+            </div>
+        </footer>
+
+
+    </div>
+    <!-- End Content -->
+
+    <!-- Theme Js -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+
+</body>
+
+</html>
