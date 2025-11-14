@@ -2,8 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { useLocale } from 'next-intl';
 import Logo from '@/assets/images/logo/landinger.svg';
 import IconifyIconClient from '@/component/IconifyIconClient';
+import { getLocalePath } from '@/utils/localeLink';
 import dynamic from 'next/dynamic';
 const MobileMenu = dynamic(() => import('./component/MobileMenu'));
 const NavMenu = dynamic(() => import('./component/NavMenu'));
@@ -11,6 +13,7 @@ const NavMenu = dynamic(() => import('./component/NavMenu'));
 const Topbar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const locale = useLocale();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,7 +33,7 @@ const Topbar = () => {
                 <div className="container">
                     <div className="flex items-center justify-between py-2.5 lg:py-4.5">
                         <div className="text-lg font-bold">
-                            <Link href="/home-1">
+                            <Link href={getLocalePath('/home-1', locale as string)}>
                                 <Image src={Logo} alt="Logo" className="h-8.5 lg:h-9" />
                             </Link>
                         </div>

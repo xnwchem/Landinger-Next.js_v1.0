@@ -1,0 +1,39 @@
+{
+  "common": {
+    "appName": "Landinger",
+    "appDescription": "Multipurpose Tailwind CSS Landing Page Template",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "tryForFree": "Try for free",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "readMore": "Read More",
+    "backToHome": "Back to Home",
+    "retry": "Retry"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "Sorry, an unexpected error occurred. We've logged this issue and are working to fix it.",
+    "backToHome": "Back to Home"
+  },
+  "navigation": {
+    "home": "Home",
+    "product": "Product",
+    "pages": "Pages",
+    "account": "Account",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "title": "Intuitive solutions for complex challenges",
+    "subtitle": "Streamline your processes and enhance productivity with our all-in-one solution.",
+    "cta": "Try for free"
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Discover our powerful features"
+  }
+}
+

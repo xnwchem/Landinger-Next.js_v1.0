@@ -1,20 +1,23 @@
-
+'use client';
 
 import Link from 'next/link';
 import React from 'react';
+import { useLocale } from 'next-intl';
 import Logo from '@/assets/images/logo/landinger-light.svg';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import { currentYear } from '@/component/CurrentYear';
+import { getLocalePath } from '@/utils/localeLink';
 import Image from 'next/image';
 
 const Footer = () => {
+  const locale = useLocale();
   return (
     <>
       <footer className="bg-dark pt-15 pb-10 md:pt-17.5 md:pb-10 lg:pt-25 lg:pb-10 overflow-hidden">
         <div className="container">
           <div className="grid md:grid-cols-2 md:gap-12.5 lg:grid-cols-8 lg:gap-5 gap-10">
             <div className="lg:col-span-3">
-              <Link href="/home-1">
+              <Link href={getLocalePath('/home-1', locale as string)}>
                 <Image src={Logo} alt="" className="h-11" />
               </Link>
               <p className="mt-2.5 text-white">Trusted solutions for your growing business</p>
@@ -38,13 +41,13 @@ const Footer = () => {
                 <div>
                   <ul className="flex flex-col justify-start gap-2.5 leading-normal">
                     <li>
-                      <Link href="/home-1" className="text-primary">
+                      <Link href={getLocalePath('/home-1', locale as string)} className="text-primary">
                         Home
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/home-2"
+                        href={getLocalePath('/home-2', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Home 2
@@ -52,7 +55,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/home-3"
+                        href={getLocalePath('/home-3', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Home 3
@@ -60,7 +63,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/product-1"
+                        href={getLocalePath('/product-1', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Product
@@ -68,7 +71,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/product-2"
+                        href={getLocalePath('/product-2', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Product 2
@@ -76,7 +79,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/product-3"
+                        href={getLocalePath('/product-3', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Product 3
@@ -88,7 +91,7 @@ const Footer = () => {
                   <ul className="flex flex-col justify-start gap-2.5 leading-normal">
                     <li>
                       <Link
-                        href="/about"
+                        href={getLocalePath('/about', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         About
@@ -96,7 +99,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/request-a-demo"
+                        href={getLocalePath('/request-a-demo', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Request a Demo
@@ -104,7 +107,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/blog"
+                        href={getLocalePath('/blog', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Blog
@@ -112,7 +115,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/contact"
+                        href={getLocalePath('/contact', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Contact
@@ -120,7 +123,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/faqs"
+                        href={getLocalePath('/faqs', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         FAQs
@@ -128,7 +131,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/privacy-policy"
+                        href={getLocalePath('/privacy-policy', locale as string)}
                         className="hover:text-primary text-white transition-all duration-300"
                       >
                         Privacy

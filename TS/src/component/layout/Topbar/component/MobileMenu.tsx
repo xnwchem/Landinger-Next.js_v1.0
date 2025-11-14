@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useLocale } from 'next-intl';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import Link from 'next/link';
 import { mobileMenuData } from '@/component/layout/Topbar/data/mobileMenuData';
+import { getLocalePath } from '@/utils/localeLink';
 import Image from 'next/image';
 import logo from '@/assets/images/logo/landinger.svg';
 
@@ -14,6 +16,7 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const locale = useLocale();
 
   const toggleMenu = (index: number) => {
     setOpenIndex(prev => (prev === index ? null : index));
@@ -35,7 +38,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         }`}
       >
         <div className="h-16 flex items-center justify-between px-4 border-b border-neutral-200 sticky top-0">
-          <Link href="/">
+          <Link href={getLocalePath('/home-1', locale as string)}>
             <Image src={logo} alt="logo" className="h-8" />
           </Link>
           <button
@@ -69,7 +72,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   {menu.children.map((child, idx) => (
                     <Link
                       key={idx}
-                      href={child.href}
+                      href={getLocalePath(child.href, locale as string)}
                       className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100"
                       onClick={onClose}
                     >
@@ -88,7 +91,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           ))}
 
           <Link
-            href="/contact"
+            href={getLocalePath('/contact', locale as string)}
             className="text-dark text-base flex items-center py-2.5 font-medium hover:underline"
           >
             Contact Us
@@ -96,7 +99,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
           <div className="flex md:hidden mt-3">
             <Link
-              href="/log-in"
+              href={getLocalePath('/log-in', locale as string)}
               className="w-full bg-primary text-center text-dark hover:text-primary hover:bg-dark rounded-lg px-7.5 py-3.5 font-medium transition-all duration-300"
             >
               Sign in

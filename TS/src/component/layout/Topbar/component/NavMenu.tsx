@@ -3,12 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { useLocale } from 'next-intl';
 import IconifyIconClient from '@/component/IconifyIconClient';
 import { usePathname } from 'next/navigation';
 import { navMenuData } from '@/component/layout/Topbar/data/navData';
+import { getLocalePath } from '@/utils/localeLink';
 
 const NavMenu = () => {
   const pathname = usePathname();
+  const locale = useLocale();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
@@ -39,7 +42,7 @@ const NavMenu = () => {
           return (
             <Link
               key={idx}
-              href={item.href}
+              href={getLocalePath(item.href, locale as string)}
               className="flex items-center text-dark text-base py-1.25 font-medium"
             >
               <span className={isActive ? 'underline' : ''}>{item.title}</span>
@@ -71,7 +74,7 @@ const NavMenu = () => {
                       {item.children.map((link, i) => (
                         <Link
                           key={i}
-                          href={link.href}
+                          href={getLocalePath(link.href, locale as string)}
                           className="block text-base py-1.5"
                           onClick={() => setClickedIndex(null)}
                         >
@@ -100,7 +103,7 @@ const NavMenu = () => {
                         {item.children.map((link, i) => (
                           <Link
                             key={i}
-                            href={link.href}
+                            href={getLocalePath(link.href, locale as string)}
                             className="flex items-center gap-2 p-4 rounded-2xl hover:bg-gray-100"
                             onClick={() => setClickedIndex(null)}
                           >
@@ -130,7 +133,7 @@ const NavMenu = () => {
                           {col.links.map((link, lIdx) => (
                             <Link
                               key={lIdx}
-                              href={link.href}
+                              href={getLocalePath(link.href, locale as string)}
                               className={`block font-medium text-dark text-base py-1.5 ${
                                 pathname.startsWith(link.href) ? 'underline' : ''
                               } hover:underline`}

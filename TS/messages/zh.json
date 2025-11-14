@@ -1,0 +1,39 @@
+{
+  "common": {
+    "appName": "Landinger",
+    "appDescription": "多用途 Tailwind CSS 落地页模板",
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系我们",
+    "signIn": "登录",
+    "signUp": "注册",
+    "tryForFree": "免费试用",
+    "learnMore": "了解更多",
+    "getStarted": "开始使用",
+    "readMore": "阅读更多",
+    "backToHome": "返回首页",
+    "retry": "重试"
+  },
+  "error": {
+    "title": "出错了",
+    "description": "抱歉，发生了意外错误。我们已经记录了这个问题，正在努力修复。",
+    "backToHome": "返回首页"
+  },
+  "navigation": {
+    "home": "首页",
+    "product": "产品",
+    "pages": "页面",
+    "account": "账户",
+    "contactUs": "联系我们"
+  },
+  "hero": {
+    "title": "为复杂挑战提供直观解决方案",
+    "subtitle": "通过我们的一体化解决方案简化流程并提高生产力。",
+    "cta": "免费试用"
+  },
+  "features": {
+    "title": "功能特性",
+    "subtitle": "发现我们的强大功能"
+  }
+}
+

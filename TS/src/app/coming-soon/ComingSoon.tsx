@@ -20,7 +20,7 @@ const ComingSoon = () => {
 
               <h1 className="mb-2.5 lg:text-6xl md:text-5.5xl text-4xl">We are coming soon! </h1>
               <p className="mb-2.5">
-                We're bringing something fresh and exciting to the table. Be the first to experience
+                We&apos;re bringing something fresh and exciting to the table. Be the first to experience
                 it!{' '}
               </p>
               <form className="flex md:gap-5 md:flex-row gap-2.5 flex-col md:w-4/5 mx-auto mt-7.5 mb-3.75">
